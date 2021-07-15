@@ -1,3 +1,22 @@
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+ul,
+li,
+div,
+p,
+h1,
+main,
+input,
+i {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 * {
   box-sizing: border-box;
   font-family: Lato, sans-serif;
@@ -25,6 +44,7 @@ main {
   justify-content: space-between;
   align-items: center;
   height: 50px;
+  flex-direction: row;
 }
 
 #title h4 {
@@ -35,34 +55,6 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-
-#add-div {
-  display: flex;
-  padding: 0 10px;
-}
-
-#add-div button {
-  margin: 0;
-  padding: 0;
-  width: 20px;
-}
-
-#add-to-list {
-  margin: 0;
-  padding: 0;
-  resize: none;
-  height: 50px;
-  line-height: 50px;
-  overflow: hidden;
-  width: 100%;
-  border: none;
-  outline: none;
-}
-
-#add-to-list::placeholder {
-  font-style: italic;
-  line-height: 50px;
 }
 
 .item {
@@ -105,4 +97,38 @@ hr {
 #clear:hover {
   color: #000;
   text-decoration: underline;
+}
+
+.list-item {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.division {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+i {
+  width: auto;
+  padding-right: 1rem;
+}
+
+p {
+  width: auto;
+}
+
+input {
+  width: auto;
+}
+
+textarea {
+  border: black 1px solid;
+}
+
+.icon-A {
+  height: auto;
 }
