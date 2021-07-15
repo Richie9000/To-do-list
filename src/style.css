@@ -1,4 +1,5 @@
 @import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+
 ul,
 li,
 div,
@@ -55,6 +56,10 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+input {
+  width: auto;
 }
 
 .item {
@@ -119,10 +124,7 @@ i {
 
 p {
   width: auto;
-}
-
-input {
-  width: auto;
+  padding-left: 10rem;
 }
 
 textarea {
