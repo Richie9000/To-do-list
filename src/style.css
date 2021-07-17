@@ -1,136 +1,92 @@
-@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
-
+html,
+body,
+div,
+main,
 ul,
 li,
-div,
 p,
+i,
 h1,
-main,
-input,
-i {
+h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: Lato, sans-serif;
-  font-weight: 300;
-}
-
-ul {
-  list-style: none;
+  color: rgb(44, 44, 44);
   margin: 0;
   padding: 0;
 }
 
 main {
-  margin: 200px auto 0 auto;
-  padding: 0;
-  max-width: 450px;
-  background-color: #fff;
-  box-shadow: 3px 3px 3px 3px #cbcbcb;
+  max-width: 400px;
+  height: auto;
+  box-shadow: 0.5rem 0.5rem;
 }
 
-#title {
-  margin: 0;
-  padding: 0 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
+ul {
+  border: rgb(221, 210, 210) 1px solid;
+  border-radius: 5px;
+}
+
+li {
+  padding: 0.5rem;
+  justify-content: inherit;
   flex-direction: row;
 }
 
-#title h4 {
-  font-weight: 400;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-input {
+p {
+  font-size: 2rem;
   width: auto;
 }
 
-.item {
-  padding: 0 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 45px;
+h1 {
+  font-size: 2rem;
 }
 
-.item input {
-  margin-right: 10px;
+h3 {
+  font-size: 2rem;
 }
 
-label {
-  justify-self: flex-start;
-}
-
-input:checked + label {
-  color: #909090;
-  text-decoration: line-through;
-}
-
-hr {
-  margin: 0;
-  padding: 0;
-  border-top: #fff;
-  border-color: #f6f6f6;
+.dragover {
+  background-color: rgb(117, 103, 103);
 }
 
 #clear {
-  width: 100%;
-  text-align: center;
-  height: 50px;
+  background-color: rgb(15, 15, 21);
+  justify-content: center;
+  color: antiquewhite;
+}
+
+div {
+  flex-direction: row;
+}
+
+input {
+  margin-right: 0.5rem;
+}
+
+.description {
   font-size: 1rem;
-  background-color: #f6f6f6;
-  color: #909090;
-}
-
-#clear:hover {
-  color: #000;
-  text-decoration: underline;
-}
-
-.list-item {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.division {
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 1rem;
 }
 
 i {
   width: auto;
-  padding-right: 1rem;
+  margin-right: 1vw;
 }
 
-p {
-  width: auto;
-  padding-left: 10rem;
+.completed {
+  justify-content: flex-start;
 }
 
-textarea {
-  border: black 1px solid;
+#title-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 5vw;
 }
 
-.icon-A {
-  height: auto;
+#refresh {
+  display: flex;
 }

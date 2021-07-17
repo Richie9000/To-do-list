@@ -1,7 +1,5 @@
 # To-do-list
 
-![screenshot](./img/screenshot.png)
-
 Features:
 
 - Structure list
