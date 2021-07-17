@@ -76,30 +76,6 @@ i {
   margin-right: 1vw;
 }
 
-fa,
-.fas {
-  font-weight: 900;
-}
-.fa,
-.far,
-.fas {
-  font-family: "Font Awesome 5 Free";
-}
-.fa,
-.fab,
-.fad,
-.fal,
-.far,
-.fas {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-}
-
 .completed {
   justify-content: flex-start;
 }
