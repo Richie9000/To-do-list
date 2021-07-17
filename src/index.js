@@ -1,4 +1,12 @@
 import './style.css';
-import loadList from './loadlist';
+import { loadData }  from './code/status';
+import createList from './code/loadlist';
 
-loadList();
+const start = () => {
+    loadData();
+    createList();
+};
+
+start();
+
+
