@@ -1,12 +1,15 @@
 import './style.css';
-import { loadData }  from './code/status';
-import createList from './code/loadlist';
+import createList from './modules/frontend/listItems';
+import { tasks } from './modules/backend/Tasks';
 
-const start = () => {
-    loadData();
-    createList();
+const run = () => {
+  let load = JSON.parse(localStorage.getItem('tasks'));
+
+  if (load == null) {
+    load = tasks;
+  }
+
+  createList(load);
 };
 
-start();
-
-
+run();
