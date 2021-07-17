@@ -1,8 +1,9 @@
-import { clearTasks, addTasks, store } from '../backend/Tasks';
+import { clearTasks, addTask, store } from '../backend/task';
 
 const remakeList = () => {
   const draggables = document.querySelectorAll('.draggable');
-  let i = 0
+
+  let i = 0;
   draggables.forEach((draggable) => {
     draggable.setAttribute('task', i);
     i += 1;
@@ -14,7 +15,7 @@ const remakeList = () => {
     const completed = draggable.getElementsByClassName('completed')[0].checked;
     const index = draggable.getAttribute('task');
 
-    addTasks(description,completed,index);
+    addTask(description, completed, index);
 
     store();
   });
@@ -30,34 +31,17 @@ const dragover = (element, e) => {
   element.classList.add('dragover');
 };
 
+const dragleave = (element) => {
+  element.classList.remove('dragover');
+};
+
 const drop = (element) => {
   const flying = document.querySelector('.flying');
 
   element.before(flying);
 
-  const draggables = document.querySelectorAll('.draggable');
+  remakeList();
 
-  let i = 0;
-  draggables.forEach((draggable) => {
-    draggable.setAttribute('task', i);
-    i += 1;
-  });
-
-  clearTasks();
-  draggables.forEach((draggable) => {
-    const description = draggable.getElementsByClassName('description')[0].textContent;
-    const completed = draggable.getElementsByClassName('completed')[0].checked;
-    const index = draggable.getAttribute('task');
-
-    addTasks(description, completed, index);
-
-    store();
-  });
-
-  element.classList.remove('dragover');
-};
-
-const dragleave = (element) => {
   element.classList.remove('dragover');
 };
 
