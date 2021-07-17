@@ -1,55 +1,45 @@
-import { clearData, addData, saveData } from './status';
+import { clearTasks, addTasks, store } from './tasks';
 
 const dragStart = (elm) => {
-    elm.classList.add('drag');
+    elm.classList.add('flying');
 };
 
-const dragEnd = (elm) => {
-    elm.classList.remove('drag');
+const dragOver = (elm, e) => {
+    e.preventDefault();
+    elm.classList.add('dragover');
 };
-
-const dragOver = (elm, event) => {
-    event.preventDefault();
-    elm.classList.add('over-element');
-}
 
 const dragLeave = (elm) => {
-    elm.classList.remove('over-element');
-};
-
-const orderData = () => {
-    const dragE = document.querySelectorAll('.draggable');
-    let i = 0;
-    dragE.forEach((element) => {
-        element.setAttribute('index', i);
-        i += 1;
-    });
-};
-
-const updateData = () => {
-    const dragE = document.querySelectorAll('.draggable');
-    dragE.forEach((element) => {
-        const description = element.getElementsByClassName('description')[0].textContent;
-        const check = element.getElementsByClassName('completed')[0].checked;
-        const index = parseInt(element.getAttribute('index'), 10);
-        const newTask = {
-            description,
-            check,
-            index,
-        };
-        addData(newTask);
-    });
+    elm.classList.remove('dragover');
 };
 
 const drop = (elm) => {
-    elm.classList.remove('over-element');
-    const elmDragged = document.querySelector('drag');
-    elm.before(elmDragged);
-    orderData();
-    clearData();
-    updateData();
-    saveData();
+    const flying = document.querySelector('.flying');
+    elm.before(flying);
+    const draggables = document.querySelectorAll('.draggable');
+    let i = 0;
+    draggables.forEach((draggable) => {
+        draggable.setAttribute('task', i);
+        i += 1;
+    });
+
+    clearTasks();
+    draggables.forEach((draggable) => {
+        const description = draggable.getElementsByClassName('description')[0].textContent;
+        const completed = draggable.getElementsByClassName('completed')[0].checked;
+        const index = draggable.getAttribute('task');
+
+        addTasks(description, completed, index);
+
+        store();
+    });
+    elm.classList.remove('dragover');
 };
+
+const dragEnd = (elm) => {
+    elm.classList.remove('flying');
+};
+
 
 export {
     dragStart, dragEnd, dragOver, dragLeave, drop,
