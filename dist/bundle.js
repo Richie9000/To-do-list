@@ -106,7 +106,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_frontend_listItems__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/frontend/listItems */ \"./src/modules/frontend/listItems.js\");\n/* harmony import */ var _modules_backend_task__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/backend/task */ \"./src/modules/backend/task.js\");\n\n\n\n\nconst run = () => {\n(0,_modules_frontend_listItems__WEBPACK_IMPORTED_MODULE_1__.default)((0,_modules_backend_task__WEBPACK_IMPORTED_MODULE_2__.loadTasks)());\n};\n\nrun();\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_frontend_listItems__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/frontend/listItems */ \"./src/modules/frontend/listItems.js\");\n/* harmony import */ var _modules_backend_task__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/backend/task */ \"./src/modules/backend/task.js\");\n\n\n\n\nconst run = () => {\n  (0,_modules_frontend_listItems__WEBPACK_IMPORTED_MODULE_1__.default)((0,_modules_backend_task__WEBPACK_IMPORTED_MODULE_2__.loadTasks)());\n};\nrun();\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
 
 /***/ }),
 
